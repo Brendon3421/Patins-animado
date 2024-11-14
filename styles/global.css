@@ -46,3 +46,7 @@ h2{
     /* Line Height 120% */
     line-height: 1.2;
 }
+a{
+    color: inherit;
+    text-decoration: none;
+}
