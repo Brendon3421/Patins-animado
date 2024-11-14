@@ -1,0 +1,101 @@
+footer {
+    max-width: 80rem;
+    width: 100%;
+    padding: 4rem 2rem 2rem;
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        font: 700 1.25rem/1.3 'Syne', sans-serif;
+
+        & img {
+            width: 2rem;
+            transition: rotate 350ms;
+
+            &:hover {
+                rotate: 90deg;
+
+            }
+        }
+
+        & nav {
+            display: flex;
+            gap: 2rem;
+
+
+        }
+    }
+}
+
+footer .logo nav a {
+    position: relative;
+    font: 700 1.25rem/1.3 'Syne', sans-serif;
+    margin: 0.25rem;
+    position: relative;
+
+    &:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+nav a::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--snitap-leaf-mid);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    font: 700 1.25rem/1.3 'Syne', sans-serif;
+
+    transform: scaleX(0);
+    transition: transform 200ms linear;
+}
+
+footer .social-links {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* Adiciona para que o ::before seja posicionado relativo a .social-links */
+}
+
+footer .social-links a {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    position: relative;
+    /* Necessário para que o conteúdo de `a` esteja acima do ::before */
+    z-index: 2;
+    /* Certifica que o conteúdo do link esteja acima do ::before */
+}
+
+footer .social-links a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    background: var(--snitap-sun);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Coloca o ::before atrás do conteúdo do link */
+    scale: 0;
+    transition: scale 200ms;
+
+}
+
+footer a:hover::before {
+    scale: 1;
+}
