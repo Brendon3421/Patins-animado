@@ -18,35 +18,37 @@
     --snitap-leaf-mid: #16A34A;
     --text-bs: #000000;
     --highlights: #000000;
-    --backgroundp: #FAFAFA
+    --backgroundp: #FAFAFA --ff-base:"Montserrat", sans-serif;
 
-    --ff-base:"Montserrat", sans-serif;
-
-    --text-sm:0.875rem;
-    --text-base:1rem;
-    --text-lg:2.5rem;
-    --text-xl:4rem
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 2.5rem;
+    --text-xl: 4rem
 }
 
-html,button{
+html,
+button {
     font: 500 1rem/1.5 var(--ff-base);
 }
 
-h1,h2{
+h1,
+h2 {
     font-family: 'Syne', sans-serif;
 }
 
-h1{
+h1 {
     font-size: var(--text-xl);
     /* Line Height 125% */
     line-height: 1.25;
 }
-h2{
+
+h2 {
     font-size: var(--text-lg);
     /* Line Height 120% */
     line-height: 1.2;
 }
-a{
+
+a {
     color: inherit;
     text-decoration: none;
 }
