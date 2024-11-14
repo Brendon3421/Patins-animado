@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --snitap-sun: #FFCD1E;
+    --snitap-sky-light: #67E8F9;
+    --snitap-sky-mid: #06B6D4;
+    --snitap-joy-mid: #DB2777;
+    --snitap-joy-light: #F472B6;
+    --snitap-leaf-mid: #16A34A;
+    --text-bs: #000000;
+    --highlights: #000000;
+    --backgroundp: #FAFAFA
+
+    --ff-base:"Montserrat", sans-serif;
+
+    --text-sm:0.875rem;
+    --text-base:1rem;
+    --text-lg:2.5rem;
+    --text-xl:4rem
+}
+
+html,button{
+    font: 500 1rem/1.5 var(--ff-base);
+}
+
+h1,h2{
+    font-family: 'Syne', sans-serif;
+}
+
+h1{
+    font-size: var(--text-xl);
+    /* Line Height 125% */
+    line-height: 1.25;
+}
+h2{
+    font-size: var(--text-lg);
+    /* Line Height 120% */
+    line-height: 1.2;
+}
