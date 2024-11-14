@@ -126,10 +126,11 @@ section.hero {
 
         & img[src*="stars-2"] {
             max-width: 2.5rem;
+            opacity: 0;
             right: 0;
             bottom: 45%;
             transform: translateX(400%);
-            animation: slideIn 2.2s 800ms ease both,rotate 2s 800ms both;
+            animation: slideIn 2.2s 800ms ease both,rotate 2s 800ms both, appear 100ms 800ms both;
         }
     }
 }
