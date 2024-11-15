@@ -108,3 +108,90 @@ section.gallery {
         transform: translateY(100%);
     }
 }
+
+
+@media (width <=80em) {
+    section.gallery {
+        width: 100%;
+        max-width: 80em;
+        padding: 1.5rem 1rem;
+        /* Reduzido para aproximar o conteúdo */
+        margin-inline: auto;
+
+        & header {
+            text-align: center;
+        }
+
+        & header span {
+            font: 500 var(--text-sm)/1.5 0.75rem;
+        }
+
+        & header h2 {
+            font-size: 1.5rem;
+        }
+
+        & img {
+            width: 100%;
+            height: 30px;
+            background-image: cover;
+        }
+
+        & .content {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            overflow-y: hidden;
+
+         
+        }
+
+        & figure {
+            position: relative;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            animation: image-appear linear backwards;
+            animation-timeline: view();
+            animation-range: 6.25rem 18.75rem;
+
+            &[data-delay] {
+                animation-range: 6.25rem 21.875rem;
+            }
+
+            &>img {
+                transition: scale 500ms;
+                height: 100%;
+            }
+
+            &:hover {
+                & img {
+                    scale: 1.1;
+                }
+
+                figcaption {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        & figcaption {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            transition: transform 500ms;
+            font: 500 var(--text-sm)/1.5 var(--ff-base);
+            color: white;
+            background: linear-gradient(to top, rgb(0 0 0 / 0.64), rgb(0 0 0 / 0.0));
+
+            &>img {
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+}

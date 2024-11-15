@@ -87,3 +87,23 @@ footer .social-links a::before {
 footer .social-links a:hover::before {
     transform: scale(1);
 }
+
+@media (width <=80em) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        justify-content: flex-end;
+    }
+
+    footer nav a{
+
+        display: block;
+
+        margin: 2rem;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+
+}
