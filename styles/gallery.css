@@ -110,6 +110,17 @@ section.gallery {
 }
 
 
+@keyframes image-appear-x {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @media (width <=80em) {
     section.gallery {
         width: 100%;
@@ -148,26 +159,17 @@ section.gallery {
         }
 
         & figure {
-            position: relative;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            animation: image-appear linear backwards;
-            animation-timeline: view();
-            animation-range: 6.25rem 18.75rem;
-
-            &[data-delay] {
-                animation-range: 6.25rem 21.875rem;
-            }
-
-            &>img {
-                transition: scale 500ms;
-                height: 100%;
-            }
-
-            &:hover {
-                & img {
+        position: relative;
+        border-radius: 2.5rem;
+        overflow: hidden;
+        opacity: 0;
+        line-height: 0;
+        animation: image-appear-x 7s ease both;
+        
+  
+        
+        &:hover {
+            & img {
                     scale: 1.1;
                 }
 
